@@ -20,7 +20,7 @@ C# 이라고 하면  항상 .NET Framework 에 대한 얘기가 나오곤 합니
 
 .NET Framework의 구성을 그림으로 보면 다음과 같습니다.
 
-![](./_images/01.NET_framework/1-1.png)
+![](./images/01.NET_framework/1-1.png)
 
 위에서 하나씩 살펴보자면
 여기서 .NET 표준을 따르는 (CLS; Common Language Specification)을 따르는 여러 언어를 제공합니다.
@@ -37,7 +37,7 @@ Class Library 구성을 보면 다음과 같습니다.
 .NET 언어로 작성된 프로그램을 실행하고 관리하는 실행환경이며 Java의 virtual machine에 해당한다고 볼 수 있습니다. CLR은 .NET에서 동작하는 프로그램을 적재하고, 프로그램의 동적 컴파일, 프로그램의 실행, 메모리관리 (Garbage Collection) ,프로그램의 예외처리, 언어 간의 상속 지원, COM과의 상호 운영성 지원 등을 가능케 합니다. 
 .NET 언어라 하면 C#뿐만 아니라 위에서 나열하였던 VB.NET 등 .NET 표준을 따르는 여러언어들은 CLR을 통해 프로그램을 실행할 수 있게 됩니다.
 
-![](./_images/01.NET_framework/1-2png)
+![](/images/01.NET_framework/1-2png)
 
 이것이 가능한 이유는 Intermediate Language (IL, 중간언어) 라는 기계어로 변환하기 쉬운 상태의 중간 단계의 언어로 .NET에서 번역되어 실행되기 위해 IL형태로 컴파일을 하는데, IL을 기계어로 바꾸는 번역기만 제공되면 어떤 플랫폼에서도 실행가능합니다. JIT (Just-In-Time) 컴파일러를 통해 IL을 동적으로 컴파일하는데 .NET 에서는 이와같이 프로그램을 2번 컴파일 합니다. Assembly는 이 때 IL로 컴파일된 결과 파일들을 패키징 한 것을 말합니다.(.exe는 여러개의 class와 Main프로그램을 포함하고, dll은 class만을 포함한다고 생각하면 된다.)
 
@@ -100,7 +100,7 @@ enum 열거형식명 : 기반자료형 { 상수1, 상수2, .... }
 
 enum 의 여러가지 사용방법은 다음과 같습니다.
 
-```C#
+```
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -208,7 +208,8 @@ C에서는 포인터를 이용하여 직접 데이터의 주소를 매개변수�
 C#에서는 프로그래머가 메모리를 참조한다는 것 자체가 위험하다고 판단하였기 때문에 포인터를 사용할 수 없게 했습니다. (하지만 설정으로 포인터를 사용가능하게 만들 수는 있습니다.)
 
 Call by reference 를 이용하여 두개의 데이터의 값을 바꾸는 Swap 메소드 를 만들어 보겠습니다.
-```C#
+
+```
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -236,6 +237,7 @@ namespace CsharpStudy
     }
 }
 ```
+
 [Image]
 주의하실점은 매개변수를 전달할때, 함수에서 매개변수를 받을 때 ref 키워드를 붙여서 명확한 표현을 해주셔야 합니다.
 
