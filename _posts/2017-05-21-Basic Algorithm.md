@@ -59,19 +59,19 @@ void MergeSort(int l, int r)
 
 #### Quick Sort
 
-최악의 경우 BubbleSort와 같지만 평균적으로 NlogN.
+최악의 경우 BubbleSort와 같지만 평균적으로 O(NlogN)
 
-Pivot을 어떻게 중앙에 가까운 값을 선택하느냐가 성능을 결정한다. Randomized QuickSort, Median Of 3 등을 이용할 경우 최악의 경우가 확률적으로 거의 등장하지 않는다.
+Pivot을 중앙에 가까운 값을 어떻게 선택하느냐가 성능을 결정한다. Randomized QuickSort, Median Of 3 등을 이용할 경우 최악의 경우가 확률적으로 거의 등장하지 않는다.
 다른 NlogN 정렬 알고리즘에 비하여 별개의 메모리가 필요하지 않으며 상수계수로 인하여 매우 빠르다.
 
 Time Complexity: Worst. O(N^2) , Average. O(NlogN)
 
-Algorithm: 분할정복을 이용한다. 
+Algorithm: 분할정복을 이용한다.
 1. 리스트 중 하나의 원소를 피벗으로 정한다.
 2. 피벗 앞에는 피벗보다 작은 값을, 피벗 뒤에는 피벗보다 큰 값을 배치시킨 후 리스트를 둘로 나눈다. (분할, 이때 피벗은 정렬된 후의 자리가 된다.)
 3. 분할된 두개의 작은 리스트에 대하여 Recursion으로 돌린다.
 
-분할하는 방법도 Lomuto partition, Hoare partition 등이 있는데 Hoare partition으로 정리해본다. 자세한 내용은 https://en.wikipedia.org/wiki/Quicksort 참조
+분할하는 방법도 Lomuto partition, Hoare partition 등이 있는데 Hoare partition으로 정리해본다. [자세한 내용은 WIKI](https://en.wikipedia.org/wiki/Quicksort)
 
 ```
 void Qsort(int l, int r)
@@ -96,7 +96,7 @@ void Qsort(int l, int r)
 
 #### Counting Sort
 
-모든 경우에 대한 정렬의 시간복잡도는 O(NlogN) 이 가장 빠른 것으로 증명되었다.
+모든 경우에 대한 정렬의 시간복잡도는 O(NlogN)이 가장 빠른 것으로 증명되었다.
 
 하지만 특정한 조건 내에서는 더 빠른 시간복잡도를 가질 수 있는데, 대표적으로 Counting Sort가 있다.
 
@@ -122,7 +122,7 @@ Time Complexity : O(N+K) K가 작을 경우 O(N)이다.
 
 ***
 
-이 외에도 Selection Sort, Insertion Sort, Heap Sort, Radix Sort, Shell's Sort 등 다양한 정렬방법있다. 자세한 내용은 https://namu.wiki/w/%EC%A0%95%EB%A0%AC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98 참조
+이 외에도 Selection Sort, Insertion Sort, Heap Sort, Radix Sort, Shell's Sort 등 다양한 정렬방법있다. [자세한 내용은 WIKI](https://namu.wiki/w/%EC%A0%95%EB%A0%AC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 연습문제(기초)
 1. https://www.acmicpc.net/problem/2751
