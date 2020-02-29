@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SAMPLE"
-subtitle:   TEST 중이예요..
+subtitle:   "TEST 중이예요.."
 categories: Language
 tags: C#
 ---
