@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Artwork
-slug: artwork
-menu: false
-submenu: false
-order: 1
+title: Language
+#slug: 
+menu: true
+submenu: true
+order: 2
 description: >
-  디자인이나 창작물들을 담습니다.
+  프로그래밍 언어를 공부할 수 있습니다.
 ---
